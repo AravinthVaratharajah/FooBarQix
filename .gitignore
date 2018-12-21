@@ -1,0 +1,8 @@
+#Ignored Files
+
+\.vs/
+FooBarQix/Debug/
+FooBarQix/Release/
+FooBarQix/obj/
+FooBarQix/bin/
+\.DS_Store
