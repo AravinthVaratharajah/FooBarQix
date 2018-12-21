@@ -11,6 +11,7 @@ namespace FooBarQixKata
             for (int i = 1; i < 101; i++)
             {
                 message = IsDivisibleByThree(message, i);
+                message = IsDivisibleByFive(message, i);
                 CheckMessageEmpty(message, i);
                 message = "";
             }
@@ -20,6 +21,13 @@ namespace FooBarQixKata
         {
             if (i % 3 == 0)
                 message += "Foo";
+            return message;
+        }
+
+        public static string IsDivisibleByFive(string message, int i)
+        {
+            if (i % 5 == 0)
+                message += "Bar";
             return message;
         }
 
