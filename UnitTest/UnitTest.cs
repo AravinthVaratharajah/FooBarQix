@@ -19,5 +19,12 @@ namespace UnitTest
             var message = FooBarQix.IsDivisibleByFive("", 5);
             Assert.AreEqual(message, "Bar");
         }
+
+        [TestMethod]
+        public void ShouldReturnQixWhenIsDivisibleBySeven()
+        {
+            var message = FooBarQix.IsDivisibleBySeven("", 7);
+            Assert.AreEqual(message, "Qix");
+        }
     }
 }
