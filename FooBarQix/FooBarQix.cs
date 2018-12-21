@@ -12,6 +12,7 @@ namespace FooBarQixKata
             {
                 message = IsDivisibleByThree(message, i);
                 message = IsDivisibleByFive(message, i);
+                message = IsDivisibleBySeven(message, i);
                 CheckMessageEmpty(message, i);
                 message = "";
             }
@@ -28,6 +29,13 @@ namespace FooBarQixKata
         {
             if (i % 5 == 0)
                 message += "Bar";
+            return message;
+        }
+
+        public static string IsDivisibleBySeven(string message, int i)
+        {
+            if (i % 7 == 0)
+                message += "Qix";
             return message;
         }
 
