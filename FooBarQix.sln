@@ -1,7 +1,7 @@
 
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FooBarQix", "FooBarQix\FooBarQix.csproj", "{A9F03BA3-8B38-4C24-A4DE-8A08863DD5CC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FooBarQixKata", "FooBarQix\FooBarQixKata.csproj", "{A9F03BA3-8B38-4C24-A4DE-8A08863DD5CC}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTest", "UnitTest\UnitTest.csproj", "{211032E4-4496-4853-A99F-1CB8D9CB6AD8}"
 EndProject
