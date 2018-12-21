@@ -6,3 +6,7 @@ FooBarQix/Release/
 FooBarQix/obj/
 FooBarQix/bin/
 \.DS_Store
+UnitTest/Debug/
+UnitTest/Release/
+UnitTest/obj/
+UnitTest/bin/
