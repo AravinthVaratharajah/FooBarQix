@@ -9,21 +9,21 @@ namespace UnitTest
         [TestMethod]
         public void ShouldReturnFooWhenIsDivisibleByThree()
         {
-            var message = FooBarQix.IsDivisibleByThree("", 3);
+            var message = FooBarQix.IsDivisible(string.Empty, 3);
             Assert.AreEqual(message, "Foo");
         }
 
         [TestMethod]
         public void ShouldReturnBarWhenIsDivisibleByFive()
         {
-            var message = FooBarQix.IsDivisibleByFive("", 5);
+            var message = FooBarQix.IsDivisible(string.Empty, 5);
             Assert.AreEqual(message, "Bar");
         }
 
         [TestMethod]
         public void ShouldReturnQixWhenIsDivisibleBySeven()
         {
-            var message = FooBarQix.IsDivisibleBySeven("", 7);
+            var message = FooBarQix.IsDivisible(string.Empty, 7);
             Assert.AreEqual(message, "Qix");
         }
     }

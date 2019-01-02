@@ -1,41 +1,38 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace FooBarQixKata
 {
     public class FooBarQix
     {
-        static void Main(string[] args)
+        private static readonly Dictionary<int, string> _fooBarQix = new Dictionary<int, string>
         {
-            var message = "";
+            { 3, "Foo"},
+            { 5, "Bar"},
+            { 7, "Qix"}
+        };
 
+        public static void Main(string[] args)
+        {
+            string message = string.Empty;
             for (int i = 1; i < 101; i++)
             {
-                message = IsDivisibleByThree(message, i);
-                message = IsDivisibleByFive(message, i);
-                message = IsDivisibleBySeven(message, i);
+                IsDivisible(message, i);
                 CheckMessageEmpty(message, i);
-                message = "";
             }
         }
 
-        public static string IsDivisibleByThree(string message, int i)
-        {
-            if (i % 3 == 0)
-                message += "Foo";
-            return message;
-        }
+        private static string GetFooBarQix(int number) => _fooBarQix[number];
 
-        public static string IsDivisibleByFive(string message, int i)
+        public static string IsDivisible(string message, int i)
         {
-            if (i % 5 == 0)
-                message += "Bar";
-            return message;
-        }
-
-        public static string IsDivisibleBySeven(string message, int i)
-        {
-            if (i % 7 == 0)
-                message += "Qix";
+            foreach (var fooBarQix in _fooBarQix.Keys)
+            {
+                if (i % fooBarQix == 0)
+                {
+                    message += GetFooBarQix(fooBarQix);
+                }
+            }
             return message;
         }
 
