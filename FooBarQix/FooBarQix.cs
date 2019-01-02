@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 
 namespace FooBarQixKata
 {
@@ -14,10 +15,12 @@ namespace FooBarQixKata
 
         public static void Main(string[] args)
         {
-            string message = string.Empty;
             for (int i = 1; i < 101; i++)
             {
-                IsDivisible(message, i);
+                string message = string.Empty;
+
+                message = IsDivisible(message, i);
+                message = Contains(message, i);
                 CheckMessageEmpty(message, i);
             }
         }
@@ -36,6 +39,20 @@ namespace FooBarQixKata
             return message;
         }
 
+        public static string Contains(string message, int i)
+        {
+            foreach (var numberChar in i.ToString(CultureInfo.InvariantCulture).ToCharArray())
+            {
+                foreach (var fooBarQix in _fooBarQix.Keys)
+                {
+                    if (numberChar.Equals(fooBarQix.ToString()[0]))
+                        message += GetFooBarQix(fooBarQix);
+                }
+            }
+
+            return message;
+        }
+
         public static void CheckMessageEmpty(string message, int i)
         {
             if (string.IsNullOrEmpty(message))
@@ -43,5 +60,7 @@ namespace FooBarQixKata
             else
                 Console.WriteLine(message);
         }
+
+
     }
 }
