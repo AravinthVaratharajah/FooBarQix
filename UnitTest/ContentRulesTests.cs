@@ -1,5 +1,4 @@
-﻿using System;
-using FooBarQixKata;
+﻿using FooBarQixKata;
 using NFluent;
 using NUnit.Framework;
 
@@ -42,6 +41,13 @@ namespace UnitTest
         [TestCase(7, "Qix")]
         [TestCase(77, "QixQix")]
         public void Should_Return_Qix_When_Number_Contains_Seven(int number, string expected)
+        {
+            Check.That(Contener.Apply(number)).IsEqualTo(expected);
+        }
+
+        [TestCase(0, "*")]
+        [TestCase(70, "Qix*")]
+        public void Should_Return_Asterix_When_Number_Contains_Zero(int number, string expected)
         {
             Check.That(Contener.Apply(number)).IsEqualTo(expected);
         }

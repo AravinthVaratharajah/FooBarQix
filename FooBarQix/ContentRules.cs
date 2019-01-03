@@ -1,5 +1,4 @@
-﻿using System;
-namespace FooBarQixKata
+﻿namespace FooBarQixKata
 {
     public class ContentRules : IRules
     {
