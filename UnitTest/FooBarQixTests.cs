@@ -4,7 +4,7 @@ using NFluent;
 
 namespace UnitTest
 {
-    public class MainTests
+    public class FooBarQixTests
     {
         public IRules Divider { get; set; }
         public IRules Contener { get; set; }
