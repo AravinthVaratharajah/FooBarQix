@@ -47,5 +47,12 @@ namespace UnitTest
             var message = FooBarQix.Contains(string.Empty, 7);
             Assert.AreEqual(message, "Qix");
         }
+
+        [TestMethod]
+        public void ShouldReturnAsterixWhenDigitIsZero()
+        {
+            var message = FooBarQix.Contains(string.Empty, 0);
+            Assert.AreEqual(message, "*");
+        }
     }
 }
