@@ -48,8 +48,9 @@ namespace FooBarQixKata
                     if (numberChar.Equals(fooBarQix.ToString()[0]))
                         message += GetFooBarQix(fooBarQix);
                 }
+                if (numberChar.Equals('0'))
+                    message += "*";
             }
-
             return message;
         }
 
@@ -60,7 +61,5 @@ namespace FooBarQixKata
             else
                 Console.WriteLine(message);
         }
-
-
     }
 }
