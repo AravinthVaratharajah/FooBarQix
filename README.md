@@ -1,6 +1,6 @@
 # FooBarQix Kata
 
-## Rules
+## Statement
 
 ### Step 1
 Write a program that prints numbers from 1 to 100, one number per line. For each printed number, use the following rules:
@@ -33,6 +33,16 @@ We have a new business request : we must keep a trace of 0 in numbers, each 0 mu
 
 ## Why C#.NET 
 I choosed C#.NET because I would like to improve my skills in this language. 
+This kata is implemented with the strategy pattern and it contains TDD (Nfluent, NUnit).
 
-# How to run and running the tests
+## How to run and running the tests
 Open the solution 'FooBarQix.sln' with Visual Studio and run 'FooBarQix.cs'.
+
+If you run with dotnet cli you should first build the project with 
+```
+dotnet build
+```
+Then you have to run the project to execute with the following command
+```
+dotnet run -p FooQixBar
+```
